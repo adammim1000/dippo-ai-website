@@ -1,5 +1,5 @@
 /* GANTI nomor WhatsApp di bawah (format 62 tanpa + dan tanpa 0 di depan) */
-const WA = "6285889002998";
+const WA = "6281234567890";
 document.querySelectorAll("[data-wa]").forEach(a => {
   a.href = "https://wa.me/" + WA + "?text=" + encodeURIComponent(a.dataset.wa);
 });
@@ -13,7 +13,7 @@ if (f) f.addEventListener("submit", e => {
   const p = document.querySelector(".pesan");
   if (f.dataset.aksi === "daftar") {
     const d = new FormData(f);
-    const t = "Halo DIPPO, saya ingin coba gratis 14 hari. Nama: " + d.get("nama") + ", Bisnis: " + d.get("bisnis") + ", Email: " + d.get("email");
+    const t = "Halo DIPPO AI, saya ingin coba gratis 14 hari. Nama: " + d.get("nama") + ", Bisnis: " + d.get("bisnis") + ", Email: " + d.get("email");
     window.open("https://wa.me/" + WA + "?text=" + encodeURIComponent(t), "_blank");
   } else {
     p.textContent = f.dataset.aksi === "login"
